@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-container h1 {
+    color: lightgray;
+}
+
+.text-container p {
+    color: lightgray;
+}
+
+textarea {
+    height: calc(100vh / 3);
+    margin-top: 20px;
+    padding: 10px;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.keyboard {
+    width: max-content;
+    margin: 30px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid lightgray;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button {
+    font-weight: bold;
+    color: #fff;
+    width: 35px;
+    height: 30px;
+    border: 1px solid rgb(80, 32, 0);
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgb(146, 146, 146), rgb(85, 86, 86));
+    box-shadow:
+        0 4px rgb(86, 38, 6),
+        0 3px 15px rgba(0, 0, 0, .4),
+        inset 0 1px rgba(255, 255, 255, .3),
+        inset 0 0 3px rgba(255, 255, 255, .5);
+    transition: .1s;
+}
+
+.button-service {
+    font-weight: bold;
+    color: #fff;
+    height: 30px;
+    padding: 0px 10px;
+    border: 1px solid rgb(80, 32, 0);
+    border-radius: 5px;
+    background: linear-gradient(0deg, rgb(98, 99, 99), rgb(24, 24, 24));
+    box-shadow:
+        0 4px rgb(86, 38, 6),
+        0 3px 15px rgba(0, 0, 0, .4),
+        inset 0 1px rgba(255, 255, 255, .3),
+        inset 0 0 3px rgba(255, 255, 255, .5);
+    transition: .1s;
+}
+
+.button-service[data-code='Enter'] {
+    padding: 0 25px;
+}
+
+.button-service[data-code='Space'] {
+    width: 283px;
+}
+
+.button:hover,
+.button-service:hover {
+    background: rgb(167, 91, 41) linear-gradient(rgb(126, 69, 31), rgb(167, 91, 41) 80%);
+}
+
+.button:active,
+.button-service:active,
+.active-button,
+.click-button {
+    background: rgb(120, 63, 25) linear-gradient(rgb(120, 63, 25) 20%, rgb(167, 91, 41));
+    box-shadow:
+        0 2px rgb(86, 38, 6),
+        0 1px 6px rgba(0, 0, 0, .4),
+        inset 0 1px rgba(255, 255, 255, .3),
+        inset 0 0 3px rgba(255, 255, 255, .5);
+    -webkit-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+
+@media (max-width: 767.8px) {
+    textarea {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .keyboard {
+        gap: 5px;
+    }
+
+    .keyboard-row {
+        gap: 5px;
+    }
+
+    .button {
+        width: 30px;
+        height: 25px;
+    }
+
+    .button-service {
+        height: 25px;
+        padding: 0 5px;
+
+    }
+
+    .button-service[data-code='Enter'] {
+        padding: 0 10px;
+    }
+
+    .button-service[data-code='Space'] {
+        width: 231px;
+    }
+}
